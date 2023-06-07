@@ -2,12 +2,9 @@
 
 ## 简介
 
-文本简化任务是自然语言处理领域的基础任务之一，旨在通过改写使句子更容易理解。文本简化可以助力分级阅读、机器翻译等研究，并帮助语言学习者理解复杂文本。目前，关于中文文本简化的研究较少，缺乏通用的评估数据是重要原因之一。为此，我组构建了多参考中文文本简化数据集MCTS（Multi-Reference Chinese Text Simplification Dataset）。该数据集是迄今为止中文文本简化任务上规模最大、参考最多的评估数据集，包括723条从新闻语料中挑选的复杂结构句子，每一句分别包含多条人工简化后的句子。这是我们探索中文文本简化的一项基础性工作，期望能为今后的研究提供参考。
+文本简化任务是自然语言处理领域的基础任务之一，旨在通过改写使句子更容易理解。文本简化可以助力分级阅读、机器翻译等研究，并帮助语言学习者理解复杂文本。目前，关于中文文本简化的研究较少，缺乏通用的评估数据是重要原因之一。为此，我组构建了多参考中文文本简化数据集 MCTS（Multi-Reference Chinese Text Simplification Dataset）。该数据集是迄今为止中文文本简化任务上规模最大、参考最多的评估数据集，包括 723 条从新闻语料中挑选的复杂结构句子，每一句分别包含多条人工简化后的句子。这是我们探索中文文本简化的一项基础性工作，期望能为今后的研究提供参考。
 
 论文地址：[https://arxiv.org/abs/2306.02796](< https://arxiv.org/abs/2306.02796 >)
-
-数据示例：
-![alt 数据示例](./image/exp.png)
 
 ### 数据规模
 
@@ -25,15 +22,19 @@ MCTS数据集是中文文本简化任务上规模最大、参考最多的**评�
 
 所有文件均以 ``mcts.`` 为前缀。中缀为 ``test.`` 的文件是测试集，中缀为 ``dev.`` 的文件是开发集。
 
-后缀为 ``.orig`` 的文件是未经简化的源语句文件。由标注员简化的5条参考句后缀为 ``simp`` ，后接序号。对于拥有相同中缀的源语句文件和参考句文件，其中句子是按行一一对应的。
+后缀为 ``.orig`` 的文件是未经简化的源语句文件。由标注员简化的5条参考句后缀为 ``.simp`` ，后接序号。对于拥有相同中缀的源语句文件和参考句文件，其中句子是按行一一对应的。
+
+### 数据示例
+![alt 数据示例](./image/exp.png)
+
 
 ### 评估方式
 
-我们采用EASSE提供的自动化评估指标SARI、BLEU，以及Kong等人在论文[*Multitasking framework for unsupervised simple definition generation*](https://arxiv.org/abs/2203.12926) 中提供的HSK-Level评估方式。
+我们采用 [EASSE](https://github.com/feralvam/easse) 提供的自动化评估指标SARI、BLEU，以及Kong等人在论文 [*Multitasking framework for unsupervised simple definition generation*](https://arxiv.org/abs/2203.12926) 中提供的HSK-Level评估方式。
 
-*注：若您使用[EASSE](https://github.com/feralvam/easse)软件包进行评估，您应该先对所有测试数据执行分词。*
+*注：若您使用 EASSE 软件包进行评估，您应该先对所有测试数据执行分词。*
 
-用于评估HSK-Level的python脚本放在 ``script`` 文件夹下。若想评估测试集源语句文件 ``mcts.test.orig`` 的HSK-Level，使用以下指令：
+用于评估 HSK-Level 的脚本放在 ``script`` 文件夹下。若想评估测试集源语句文件 ``mcts.test.orig`` 的HSK-Level，使用以下指令：
 
 ```sh
 python script/HSK_evaluate.py dataset/mcts.test.orig
@@ -76,9 +77,9 @@ MCTS数据集中的人工简化参考 (Gold Reference) 在人工评估中获得�
  
 ## 引用
 
-如果使用了MCTS数据集，请您引用：
+如果使用了 MCTS 数据集，请您引用：
 ```
-@misc{chong2023mcts,
+@misc{chong-2023-mcts,
       title={MCTS: A Multi-Reference Chinese Text Simplification Dataset}, 
       author={Ruining Chong and Luming Lu and Liner Yang and Jinran Nie and Shuhan Zhou and Yaoxin Li and Erhong Yang},
       year={2023},
