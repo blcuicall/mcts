@@ -62,7 +62,7 @@ python script/HSK_evaluate.py dataset/mcts.test.orig
 
  ![alt 评测结果](./image/result2.png)
 
-MCTS数据集中的人工简化参考（Gold Reference）在人工评估中获得了最好的平均分数和排名，明显优于其他简化系统的输出结果。
+MCTS数据集中的人工简化参考 (Gold Reference) 在人工评估中获得了最好的平均分数和排名，明显优于简化系统的输出结果。
 
 ## 作者
 
