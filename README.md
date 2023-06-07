@@ -71,7 +71,7 @@ MCTS数据集中的人工简化参考（Gold Reference）在人工评估中获�
 
 鲁鹿鸣：（lulm410402@foxmail.com）
 
-欢迎关注**[BLCU-ICALL研究组](< https://blcuicall.org >)**的主页和最新动态！
+欢迎关注[**BLCU-ICALL研究组**](< https://blcuicall.org >)的主页和最新动态！
  
 ## 引用
 
@@ -87,7 +87,6 @@ MCTS数据集中的人工简化参考（Gold Reference）在人工评估中获�
 }
 
 @misc{kong-acl-2022-simpdefiner,
-
       title={Multitasking Framework for Unsupversied Simple Definition Generation}, 
       author={Cunliang Kong and Yun Chen and Hengyuan Zhang and Liner Yang and Erhong Yang},
       booktitle = {Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics},     
