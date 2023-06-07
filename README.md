@@ -49,10 +49,10 @@ python script/HSK_evaluate.py dataset/mcts.test.orig
 
 我们对多种baseline方法进行了自动化评估。这些方法包括：
 
-- **ChatGPT生成(gpt-3.5-turbo, text-davinci-003)** ：使用turbo和davinci-003模型的测试结果；
-- **直接反向翻译(Direct Back Translation)** ：谷歌翻译进行反向翻译的生成结果；
-- **翻译Wiki-Large(Translated Wiki-Large)**：使用翻译的Wiki-Large数据集训练的BART-base文本简化模型生成的测试结果；
-- **跨语言伪数据(Cross-Lingual Pseudo Data)**：用伪数据训练的BART-Base模型生成的测试结果。
+- **ChatGPT生成**（gpt-3.5-turbo, text-davinci-003）：使用turbo和davinci-003模型的测试结果；
+- **直接反向翻译**（Direct Back Translation）** ：谷歌翻译进行反向翻译的生成结果；
+- **翻译Wiki-Large**（Translated Wiki-Large）：使用翻译的Wiki-Large数据集训练的BART-base文本简化模型生成的测试结果；
+- **跨语言伪数据**（Cross-Lingual Pseudo Data）：用伪数据训练的BART-Base模型生成的测试结果。
 
 自动化评估的结果如下表：
 
@@ -66,11 +66,11 @@ MCTS数据集中的人工简化参考（Gold Reference）在人工评估中获�
 
 ## 作者
 
-如果您有任何问题，或对我们的相关研究有兴趣，欢迎联系我们！
+如果您有任何问题，或对我们的相关研究感兴趣，欢迎联系我们！
 
-崇瑞宁：(chongruining@outlook.com)
+崇瑞宁：（chongruining@outlook.com）
 
-鲁鹿鸣：(lulm410402@foxmail.com)
+鲁鹿鸣：（lulm410402@foxmail.com）
 
 欢迎关注**[BLCU-ICALL研究组](< https://blcuicall.org >)**的主页和最新动态！
  
