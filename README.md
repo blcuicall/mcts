@@ -2,7 +2,7 @@
 
 ## 简介
 
-文本简化任务是自然语言处理领域的基础任务之一，旨在通过改写使句子更容易理解。文本简化可以助力分级阅读、机器翻译等研究，并帮助语言学习者理解复杂文本。目前，关于中文文本简化的研究较少，缺乏通用的评估数据是重要原因之一。为此，我组构建了多参考中文文本简化数据集MCTS (Multi-Reference Chinese Text Simplification Dataset)。该数据集是迄今为止中文文本简化任务上规模最大、参考最多的评估数据集，包括723条从新闻语料中挑选的复杂结构句子，每一句分别包含多条人工简化后的句子。这是我们探索中文文本简化的一项基础性工作，期望能为今后的研究提供参考。
+文本简化任务是自然语言处理领域的基础任务之一，旨在通过改写使句子更容易理解。文本简化可以助力分级阅读、机器翻译等研究，并帮助语言学习者理解复杂文本。目前，关于中文文本简化的研究较少，缺乏通用的评估数据是重要原因之一。为此，我组构建了多参考中文文本简化数据集MCTS（Multi-Reference Chinese Text Simplification Dataset）。该数据集是迄今为止中文文本简化任务上规模最大、参考最多的评估数据集，包括723条从新闻语料中挑选的复杂结构句子，每一句分别包含多条人工简化后的句子。这是我们探索中文文本简化的一项基础性工作，期望能为今后的研究提供参考。
 
 论文地址：[https://arxiv.org/abs/2306.02796](< https://arxiv.org/abs/2306.02796 >)
 
@@ -41,20 +41,20 @@ python script/HSK_evaluate.py dataset/mcts.test.orig
 
 ## 文本特征分析
 
-我们为所有简化示例计算了几种 Low-level features。下图是这些文本特征的统计图。（更详细的数据见论文）
+我们计算了简化示例的8种文本特征。以下为文本特征的统计图。（详细数据见论文）
 
 ![alt 评测结果](./image/feature.png)
 
 ## 相关实验
 
-我们对多种baseline方法进行了自动化评估。这些方法包括：
+我们对多种基线方法进行了比较，这些方法包括：
 
 - **ChatGPT生成**（gpt-3.5-turbo, text-davinci-003）：使用turbo和davinci-003模型的测试结果；
-- **直接反向翻译**（Direct Back Translation）** ：谷歌翻译进行反向翻译的生成结果；
+- **直接反向翻译**（Direct Back Translation）：谷歌翻译进行反向翻译的生成结果；
 - **翻译Wiki-Large**（Translated Wiki-Large）：使用翻译的Wiki-Large数据集训练的BART-base文本简化模型生成的测试结果；
-- **跨语言伪数据**（Cross-Lingual Pseudo Data）：用伪数据训练的BART-Base模型生成的测试结果。
+- **跨语言伪数据**（Cross-Lingual Pseudo Data）： 用伪数据训练的BART-Base模型生成的测试结果。
 
-自动化评估的结果如下表：
+我们采用EASSE工具包提供的自动化评估指标SARI、BLEU，以及Kong等人在论文Multitasking Framework for Unsupervised Simple Definition Generation提出的HSK-Level评估方式。结果如下表：
 
 ![alt 评测结果](./image/result1.png)
 
