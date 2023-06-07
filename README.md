@@ -54,7 +54,7 @@ python script/HSK_evaluate.py dataset/mcts.test.orig
 - **翻译Wiki-Large**（Translated Wiki-Large）：使用翻译的Wiki-Large数据集训练的BART-base文本简化模型生成的测试结果；
 - **跨语言伪数据**（Cross-Lingual Pseudo Data）： 用伪数据训练的BART-Base模型生成的测试结果。
 
-我们采用EASSE工具包提供的自动化评估指标 SARI、BLEU，以及 Kong 等人在论文 [*Multitasking Framework for Unsupervised Simple Definition Generation*](https://arxiv.org/abs/2203.12926) 提出的 HSK-Level 评估方式。结果如下表：
+使用自动化评估工具计算的 SARI、BLEU、HSK-Level 结果如下表：
 
 ![alt 评测结果](./image/result1.png)
 
