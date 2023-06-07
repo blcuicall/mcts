@@ -11,7 +11,7 @@
 
 ### 数据规模
 
-MCTS数据集是中文文本简化任务上规模最大、参考最多的**评估**数据集，包括723条从新华社等新闻语料中挑选的复杂结构句，每个句子分别包含5条人工简化后的句子。通过这项基础性工作，我们希望能建立对中文文本简化的基本认识，为今后的研究提供参考。
+MCTS数据集是中文文本简化任务上规模最大、参考最多的**评估**数据集，包括 723 条从新华社等新闻语料中挑选的复杂结构句，每个句子分别包含 5 条人工简化后的句子。通过这项基础性工作，我们希望能建立对中文文本简化的基本认识，为今后的研究提供参考。
 
 ### 数据格式
 
@@ -41,7 +41,7 @@ python script/HSK_evaluate.py dataset/mcts.test.orig
 
 ## 文本特征分析
 
-我们计算了简化示例的8种文本特征。以下为文本特征的统计图。（详细数据见论文）
+我们计算了简化示例的 8 种文本特征。以下为文本特征的统计图。（详细数据见论文）
 
 ![alt 评测结果](./image/feature.png)
 
@@ -54,7 +54,7 @@ python script/HSK_evaluate.py dataset/mcts.test.orig
 - **翻译Wiki-Large**（Translated Wiki-Large）：使用翻译的Wiki-Large数据集训练的BART-base文本简化模型生成的测试结果；
 - **跨语言伪数据**（Cross-Lingual Pseudo Data）： 用伪数据训练的BART-Base模型生成的测试结果。
 
-我们采用EASSE工具包提供的自动化评估指标SARI、BLEU，以及Kong等人在论文Multitasking Framework for Unsupervised Simple Definition Generation提出的HSK-Level评估方式。结果如下表：
+我们采用EASSE工具包提供的自动化评估指标 SARI、BLEU，以及 Kong 等人在论文 [*Multitasking Framework for Unsupervised Simple Definition Generation*](https://arxiv.org/abs/2203.12926) 提出的 HSK-Level 评估方式。结果如下表：
 
 ![alt 评测结果](./image/result1.png)
 
@@ -62,7 +62,6 @@ python script/HSK_evaluate.py dataset/mcts.test.orig
  ![alt 评测结果](./image/result2.png)
 
 MCTS数据集中的人工简化参考（Gold Reference）在人工评估中获得了最好的平均分数和排名，明显优于其他简化系统的输出结果。
-
 
 ## 作者
 
