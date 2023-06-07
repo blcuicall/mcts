@@ -4,14 +4,14 @@
 
 文本简化任务是自然语言处理领域的基础任务之一，旨在通过改写使句子更容易理解。文本简化可以助力分级阅读、机器翻译等研究，并帮助语言学习者理解复杂文本。目前，关于中文文本简化的研究较少，缺乏通用的评估数据是重要原因之一。为此，我组构建了多参考中文文本简化数据集MCTS (Multi-Reference Chinese Text Simplification Dataset)。该数据集是迄今为止中文文本简化任务上规模最大、参考最多的评估数据集，包括723条从新闻语料中挑选的复杂结构句子，每一句分别包含多条人工简化后的句子。这是我们探索中文文本简化的一项基础性工作，期望能为今后的研究提供参考。
 
-论文地址：[“MCTS: A Multi-Reference Chinese Text Simplification Dataset”](< https://arxiv.org/abs/2306.02796 >)
+论文地址：[https://arxiv.org/abs/2306.02796](< https://arxiv.org/abs/2306.02796 >)
 
 数据示例：
-![alt 数据示例](./image/pic1.png)
+![alt 数据示例](./image/exp.png)
 
 ### 数据规模
 
-截至2023年5月，MCTS数据集是中文文本简化任务上规模最大、参考最多的**评估**数据集，包括723条从新华社等新闻语料中挑选的复杂结构句，每个句子分别包含5条人工简化后的句子。通过这项基础性工作，我们希望能建立对中文文本简化的基本认识，为今后的研究提供参考。
+MCTS数据集是中文文本简化任务上规模最大、参考最多的**评估**数据集，包括723条从新华社等新闻语料中挑选的复杂结构句，每个句子分别包含5条人工简化后的句子。通过这项基础性工作，我们希望能建立对中文文本简化的基本认识，为今后的研究提供参考。
 
 ### 数据格式
 
@@ -29,25 +29,21 @@
 
 ### 评估方式
 
-我们采用EASSE提供的自动化评估指标SARI、BLEU，以及Kong等人在论文《[Multitasking framework for unsupervised simple definition generation](https://arxiv.org/abs/2203.12926)》中提供的HSK-Level评估方式。
+我们采用EASSE提供的自动化评估指标SARI、BLEU，以及Kong等人在论文[*Multitasking framework for unsupervised simple definition generation*](https://arxiv.org/abs/2203.12926) 中提供的HSK-Level评估方式。
 
-*注 ：若您使用[EASSE](https://github.com/feralvam/easse)软件包进行评估，您应该先对所有测试数据执行分词。*
+*注：若您使用[EASSE](https://github.com/feralvam/easse)软件包进行评估，您应该先对所有测试数据执行分词。*
 
-用于评估HSK-Level的python脚本放在``HSK_evaluate``文件夹下。若想评估您的文本``INPUT_FILE``的HSK-Level，使用以下指令：
+用于评估HSK-Level的python脚本放在 ``script`` 文件夹下。若想评估测试集源语句文件 ``mcts.test.orig`` 的HSK-Level，使用以下指令：
 
 ```sh
-python HSK_evaluate/HSK_evaluate.py INPUT_FILE
+python script/HSK_evaluate.py dataset/mcts.test.orig
 ```
-
-
-数据量：723条语料; 5参考;
-
 
 ## 文本特征分析
 
 我们为所有简化示例计算了几种 Low-level features。下图是这些文本特征的统计图。（更详细的数据见论文）
 
-![alt 评测结果](./image/pic4.png)
+![alt 评测结果](./image/feature.png)
 
 ## 相关实验
 
@@ -60,10 +56,10 @@ python HSK_evaluate/HSK_evaluate.py INPUT_FILE
 
 自动化评估的结果如下表：
 
-![alt 评测结果](./image/pic2.png)
+![alt 评测结果](./image/result1.png)
 
 对其中表现较好的几种代表性方法，我们聘请具有语言学背景的标注员，从流利性、语义完整性和简单性三个方面，进行了人工评估。评估结果如下：
- ![alt 评测结果](./image/pic5.png)
+ ![alt 评测结果](./image/result2.png)
 
 MCTS数据集中的人工简化参考（Gold Reference）在人工评估中获得了最好的平均分数和排名，明显优于其他简化系统的输出结果。
 
@@ -76,8 +72,7 @@ MCTS数据集中的人工简化参考（Gold Reference）在人工评估中获�
 
 鲁鹿鸣：(lulm410402@foxmail.com)
 
-欢迎关注BLCU-ICALL研究组的主页和最新动态！[BLCU-ICALL研究组](< https://blcuicall.org >)
-
+欢迎关注**[BLCU-ICALL研究组](< https://blcuicall.org >)**的主页和最新动态！
  
 ## 引用
 
@@ -90,6 +85,14 @@ MCTS数据集中的人工简化参考（Gold Reference）在人工评估中获�
       eprint={2306.02796},
       archivePrefix={arXiv},
       primaryClass={cs.CL}
+}
+
+@misc{kong-acl-2022-simpdefiner,
+
+      title={Multitasking Framework for Unsupversied Simple Definition Generation}, 
+      author={Cunliang Kong and Yun Chen and Hengyuan Zhang and Liner Yang and Erhong Yang},
+      booktitle = {Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics},     
+      year={2022}
 }
 ```
 
