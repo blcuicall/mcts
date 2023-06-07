@@ -89,7 +89,7 @@ MCTS数据集中的人工简化参考（Gold Reference）在人工评估中获�
 @misc{kong-acl-2022-simpdefiner,
       title={Multitasking Framework for Unsupversied Simple Definition Generation}, 
       author={Cunliang Kong and Yun Chen and Hengyuan Zhang and Liner Yang and Erhong Yang},
-      booktitle = {Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics},     
+      booktitle={Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics},     
       year={2022}
 }
 ```
