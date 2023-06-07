@@ -49,16 +49,17 @@ python script/HSK_evaluate.py dataset/mcts.test.orig
 
 我们对多种基线方法进行了比较，这些方法包括：
 
-- **ChatGPT生成**（gpt-3.5-turbo, text-davinci-003）：使用turbo和davinci-003模型的测试结果；
+- **ChatGPT生成**（gpt-3.5-turbo, text-davinci-003）：使用 GPT-3.5-turbo 和 text-davinci-003 模型的测试结果；
 - **直接反向翻译**（Direct Back Translation）：谷歌翻译进行反向翻译的生成结果；
-- **翻译Wiki-Large**（Translated Wiki-Large）：使用翻译的Wiki-Large数据集训练的BART-base文本简化模型生成的测试结果；
-- **跨语言伪数据**（Cross-Lingual Pseudo Data）： 用伪数据训练的BART-Base模型生成的测试结果。
+- **翻译Wiki-Large**（Translated Wiki-Large）：使用翻译的 Wiki-Large 数据集训练的 BART-base 文本简化模型生成的测试结果；
+- **跨语言伪数据**（Cross-Lingual Pseudo Data）： 用伪数据训练的 BART-Base 模型生成的测试结果。
 
 使用自动化评估工具计算的 SARI、BLEU、HSK-Level 结果如下表：
 
 ![alt 评测结果](./image/result1.png)
 
-对其中表现较好的几种代表性方法，我们聘请具有语言学背景的标注员，从流利性、语义完整性和简单性三个方面，进行了人工评估。评估结果如下：
+对其中表现较好的几种代表性方法，我们聘请语言学背景的同学，从流利性、语义完整性和简单性三个方面，进行了人工评估。评估结果如下：
+
  ![alt 评测结果](./image/result2.png)
 
 MCTS数据集中的人工简化参考（Gold Reference）在人工评估中获得了最好的平均分数和排名，明显优于其他简化系统的输出结果。
