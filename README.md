@@ -37,7 +37,7 @@ MCTS 数据集是中文文本简化任务上规模最大、参考最多的评估
 用于评估 HSK-Level 的脚本放在 ``script`` 文件夹下。若想评估测试集源语句文件 ``mcts.test.orig`` 的HSK-Level，使用以下指令：
 
 ```sh
-python script/HSK_evaluate.py dataset/mcts.test.orig
+python scripts/hsk_evaluate.py dataset/mcts.test.orig
 ```
 
 ## 文本特征分析
