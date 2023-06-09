@@ -25,7 +25,7 @@ MCTS 数据集是中文文本简化任务上规模最大、参考最多的评估
 后缀为 ``.orig`` 的文件是未经简化的源语句文件。由标注员简化的5条参考句后缀为 ``.simp`` ，后接序号。对于拥有相同中缀的源语句文件和参考句文件，其中句子是按行一一对应的。
 
 ### 数据示例
-![alt 数据示例](./image/exp.png)
+![alt 数据示例](./images/exp.png)
 
 
 ### 评估方式
@@ -44,7 +44,7 @@ python script/HSK_evaluate.py dataset/mcts.test.orig
 
 我们计算了简化示例的 8 种文本特征。以下为文本特征的统计图。（详细数据见论文）
 
-![alt 评测结果](./image/feature.png)
+![alt 评测结果](./images/feature.png)
 
 ## 相关实验
 
@@ -57,11 +57,11 @@ python script/HSK_evaluate.py dataset/mcts.test.orig
 
 使用自动化评估工具计算的 SARI、BLEU、HSK-Level 结果如下表：
 
-![alt 评测结果](./image/result1.png)
+![alt 评测结果](./images/result1.png)
 
 对其中表现较好的几种代表性方法，我们聘请语言学背景的同学，从流利性、语义完整性和简单性三个方面，进行了人工评估。评估结果如下：
 
- ![alt 评测结果](./image/result2.png)
+ ![alt 评测结果](./images/result2.png)
 
 MCTS数据集中的人工简化参考 (Gold Reference) 在人工评估中获得了最好的平均分数和排名，明显优于简化系统的输出结果。
 
