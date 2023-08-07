@@ -26,7 +26,7 @@ MCTS 数据集是中文文本简化任务上规模最大、参考最多的评估
 
 ### 数据示例
 
-![alt 数据示例](file://E:\github_space\mcts\images\exp.png?msec=1691414344339)
+![alt 数据示例](https://github.com/blcuicall/mcts/blob/main/images/exp.png)
 
 ### 评估方式
 
@@ -46,7 +46,7 @@ python scripts/hsk_evaluate.py dataset/mcts.test.orig
 
 我们计算了简化示例的 8 种文本特征。以下为文本特征的统计图。（详细数据见论文）
 
-![alt 评测结果](file://E:\github_space\mcts\images\feature.png?msec=1691414344326)
+![alt 评测结果](https://github.com/blcuicall/mcts/blob/main/images/feature.png)
 
 ## 相关实验
 
@@ -59,11 +59,11 @@ python scripts/hsk_evaluate.py dataset/mcts.test.orig
 
 使用自动化评估工具计算的 SARI、BLEU、HSK-Level 结果如下表：
 
-![alt 评测结果](file://E:\github_space\mcts\images\result1.png?msec=1691414344327)
+![alt 评测结果]([file://E:\github_space\mcts\images\result1.png?msec=1691414344327](https://github.com/blcuicall/mcts/blob/main/images/result1.png))
 
 对其中表现较好的几种代表性方法，我们聘请语言学背景的同学，从流利性、语义完整性和简单性三个方面，进行了人工评估。评估结果如下：
 
-![alt 评测结果](file://E:\github_space\mcts\images\result2.png?msec=1691414344316)
+![alt 评测结果]([file://E:\github_space\mcts\images\result2.png?msec=1691414344316](https://github.com/blcuicall/mcts/blob/main/images/result2.png))
 
 MCTS数据集中的人工简化参考 (Gold Reference) 在人工评估中获得了最好的平均分数和排名，明显优于简化系统的输出结果。
 
