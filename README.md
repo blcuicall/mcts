@@ -46,7 +46,7 @@ python scripts/hsk_evaluate.py dataset/mcts.test.orig
 
 ![alt 训练数据构建](https://github.com/blcuicall/mcts/blob/main/images/pseudo_data.png)
 
-经过严格的自动筛选，我们最终获得了671,474条高质量平行训练数据，这也是迄今为止在中文文本简化领域规模最大的可用训练数据。我们通过实验证明了数据的有效性。（详见相关实验）
+经过严格的自动筛选，我们最终获得了691,474条高质量平行训练数据，这也是迄今为止在中文文本简化领域规模最大的可用训练数据。我们通过实验证明了数据的有效性。（详见相关实验）
 
 这些数据放在``pseudo_data``目录下，其中``zh_selected.ori``为复杂句，``zh_selected.sim``为简单句。
 
