@@ -34,13 +34,17 @@ MCTS 数据集是中文文本简化任务上规模最大、参考最多的评估
 
 *注：若您使用 EASSE 软件包进行评估，您应该先对所有测试数据执行分词。*
 
-用于评估 HSK-Level 的脚本放在 ``script`` 文件夹下。若想评估测试集源语句文件 ``mcts.test.orig`` 的HSK-Level，使用以下指令：
+用于评估 HSK-Level 的脚本放在 ``script`` 目录下。若想评估测试集源语句文件 ``mcts.test.orig`` 的HSK-Level，使用以下指令：
 
 ```sh
 python scripts/hsk_evaluate.py dataset/mcts.test.orig
 ```
 
-## 训练伪数据
+## 训练数据数据构建
+
+由于大规模平行语料的稀缺，我们采用机器翻译与英文文本简化相结合的方法构建训练语料。（方法详见论文）
+经过严格的自动筛选，我们最终获得了671,474条高质量平行训练数据，这也是迄今为止在中文文本简化领域规模最大的可用训练数据。我们通过实验证明了数据的有效性。（详见相关实验）
+这些数据放在``pseudo_data``目录下，其中``zh_selected.ori``为复杂句，``zh_selected.sim``为简单句。
 
 ## 文本特征分析
 
@@ -55,7 +59,7 @@ python scripts/hsk_evaluate.py dataset/mcts.test.orig
 - **ChatGPT生成**（gpt-3.5-turbo, text-davinci-003）：使用 GPT-3.5-turbo 和 text-davinci-003 模型的测试结果；
 - **直接反向翻译**（Direct Back Translation）：谷歌翻译进行反向翻译的生成结果；
 - **翻译Wiki-Large**（Translated Wiki-Large）：使用翻译的 Wiki-Large 数据集训练的 BART-base 文本简化模型生成的测试结果；
-- **跨语言伪数据**（Cross-Lingual Pseudo Data）： 用伪数据训练的 BART-Base 模型生成的测试结果。
+- **跨语言伪数据**（Cross-Lingual Pseudo Data）： 用构造的数据训练 BART-Base 模型生成的测试结果。
 
 使用自动化评估工具计算的 SARI、BLEU、HSK-Level 结果如下表：
 
