@@ -40,9 +40,11 @@ MCTS 数据集是中文文本简化任务上规模最大、参考最多的评估
 python scripts/hsk_evaluate.py dataset/mcts.test.orig
 ```
 
-## 训练数据数据构建
+## 训练数据构建
 
 由于大规模平行语料的稀缺，我们采用机器翻译与英文文本简化相结合的方法构建训练语料。（方法详见论文）
+
+![alt 训练数据构建](https://github.com/blcuicall/mcts/blob/main/images/pseudo_data.png)
 
 经过严格的自动筛选，我们最终获得了671,474条高质量平行训练数据，这也是迄今为止在中文文本简化领域规模最大的可用训练数据。我们通过实验证明了数据的有效性。（详见相关实验）
 
@@ -65,7 +67,7 @@ python scripts/hsk_evaluate.py dataset/mcts.test.orig
 
 使用自动化评估工具计算的 SARI、BLEU、HSK-Level 结果如下表：
 
-![alt 评测结果](https://github.com/blcuicall/mcts/blob/main/images/result1.png))
+![alt 评测结果](https://github.com/blcuicall/mcts/blob/main/images/result1.png)
 
 对其中表现较好的几种代表性方法，我们聘请语言学背景的同学，从流利性、语义完整性和简单性三个方面，进行了人工评估。评估结果如下：
 
