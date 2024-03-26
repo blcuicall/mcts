@@ -2,7 +2,7 @@
 
 ## ✨ 简介
 
-LREC-COLING 2024 论文 **[MCTS (Multi-Reference Chinese Text Simplification Dataset)](<https://arxiv.org/abs/2306.02796>)** 的官方仓库。
+LREC-COLING 2024 论文 **[MCTS: Multi-Reference Chinese Text Simplification Dataset](<https://arxiv.org/abs/2306.02796>)** 的官方仓库。
 
 文本简化任务是自然语言处理领域的基础任务之一，旨在通过改写使句子更容易理解。文本简化可以助力分级阅读、机器翻译等研究，并帮助语言学习者理解复杂文本。目前，关于中文文本简化的研究较少，缺乏通用的评估数据是重要原因之一。为此，我组构建了多参考中文文本简化数据集 MCTS（Multi-Reference Chinese Text Simplification Dataset）。该数是迄今为止中文文本简化任务上规模最大、参考最多的评估数据集，包括 723 条从新闻语料中挑选的复杂结构句子，每一句分别包含多条人工简化后的句子。这是我们探索中文文本简化的一项基础性工作，期望能为今后的研究提供参考。
 
