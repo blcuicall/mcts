@@ -1,8 +1,10 @@
 # MCTS: A Multi-Reference Chinese Text Simplification Dataset
 
-## 简介
+## ✨ 简介
 
-文本简化任务是自然语言处理领域的基础任务之一，旨在通过改写使句子更容易理解。文本简化可以助力分级阅读、机器翻译等研究，并帮助语言学习者理解复杂文本。目前，关于中文文本简化的研究较少，缺乏通用的评估数据是重要原因之一。为此，我组构建了多参考中文文本简化数据集 MCTS（Multi-Reference Chinese Text Simplification Dataset）。该数据集是迄今为止中文文本简化任务上规模最大、参考最多的评估数据集，包括 723 条从新闻语料中挑选的复杂结构句子，每一句分别包含多条人工简化后的句子。这是我们探索中文文本简化的一项基础性工作，期望能为今后的研究提供参考。
+LREC-COLING 2024 论文 **[MCTS (Multi-Reference Chinese Text Simplification Dataset)](<https://arxiv.org/abs/2306.02796>) 的官方仓库。
+
+文本简化任务是自然语言处理领域的基础任务之一，旨在通过改写使句子更容易理解。文本简化可以助力分级阅读、机器翻译等研究，并帮助语言学习者理解复杂文本。目前，关于中文文本简化的研究较少，缺乏通用的评估数据是重要原因之一。为此，我组构建了多参考中文文本简化数据集 MCTS（Multi-Reference Chinese Text Simplification Dataset）。该数是迄今为止中文文本简化任务上规模最大、参考最多的评估数据集，包括 723 条从新闻语料中挑选的复杂结构句子，每一句分别包含多条人工简化后的句子。这是我们探索中文文本简化的一项基础性工作，期望能为今后的研究提供参考。
 
 论文地址：[https://arxiv.org/abs/2306.02796](< https://arxiv.org/abs/2306.02796 >)
 
@@ -40,7 +42,7 @@ MCTS 数据集是中文文本简化任务上规模最大、参考最多的评估
 python scripts/hsk_evaluate.py dataset/mcts.test.orig
 ```
 
-## 训练数据构建
+## 🛠️ 训练数据构建
 
 由于大规模平行语料的稀缺，我们采用机器翻译与英文文本简化相结合的方法构建训练语料。（方法详见论文）
 
@@ -50,13 +52,13 @@ python scripts/hsk_evaluate.py dataset/mcts.test.orig
 
 这些数据放在``pseudo_data``目录下，其中``zh_selected.ori``为复杂句，``zh_selected.sim``为简单句。
 
-## 文本特征分析
+## 📊 文本特征分析
 
 我们计算了简化示例的 8 种文本特征。以下为文本特征的统计图。（详细数据见论文）
 
 ![alt 评测结果](https://github.com/blcuicall/mcts/blob/main/images/feature.png)
 
-## 相关实验
+## 🧪 相关实验
 
 我们对多种基线方法进行了比较，这些方法包括：
 
