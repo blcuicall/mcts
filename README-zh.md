@@ -62,7 +62,7 @@ python scripts/hsk_evaluate.py dataset/mcts.test.orig
 
 我们对多种基线方法进行了比较，这些方法包括：
 
-- **OpenAI 模型**（gpt-3.5-turbo, text-davinci-003）：使用 GPT-3.5-turbo 和 text-davinci-003 模型的测试结果；
+- **OpenAI 模型**（gpt-3.5-turbo, text-davinci-003）：使用 GPT-3.5-turbo 和 text-davinci-003 模型的测试结果。我们还在 GPT-3.5-turbo 上进行了In-context Few-shot的测试；
 - **直接反向翻译**（Direct Back Translation）：谷歌翻译进行反向翻译的生成结果；
 - **翻译Wiki-Large**（Translated Wiki-Large）：使用翻译的 Wiki-Large 数据集训练的 BART-base 文本简化模型生成的测试结果；
 - **跨语言伪数据**（Cross-Lingual Pseudo Data）： 用构造的数据训练 BART-Base 模型生成的测试结果。
