@@ -86,9 +86,9 @@ The SARI, BLEU, and HSK-Level results calculated using the automated evaluating 
 | Source                  | 22.37     | 84.75    | 40.24      | 44.90     |
 | Gold Reference          | 48.11     | 61.62    | 46.25      | 39.50     |
 | Direct Back Translation | 40.37     | 48.72    | 39.19      | 45.44     |
-| Translated Wiki-Large   | 28.30     | 82.20    | 40.32      | 44.92     |
+| Translated Wiki-Large   | 28.30     | **82.20**   | 40.32      | 44.92     |
 | Cross-Lingual Pseudo Data | 38.49   | 63.06    | 41.57      | 44.24     |
-|gpt-3.5-turbo-few-shot   | **43.95 **   | 56.46    | **44.44**      | **40.67**     |
+|gpt-3.5-turbo-few-shot   | **43.95**   | 56.46    | **44.44**  | **40.67** |
 | gpt-3.5-turbo           | 42.39     | 49.22    | 43.68      | 41.29     |
 | text-davinci-003        | 37.97     | 36.18    | 38.80      | 45.32     |
 
@@ -96,7 +96,15 @@ The SARI, BLEU, and HSK-Level results calculated using the automated evaluating 
 
 For several of these representative methods that performed well, we hired students with linguistic backgrounds to manually evaluate them in terms of fluency, semantic integrity and simplicity. The evaluation results are as follows:
 
-![alt EvaluateResult2](https://github.com/blcuicall/mcts/blob/main/images/result2-mod.png)
+<!-- ![alt EvaluateResult2](https://github.com/blcuicall/mcts/blob/main/images/result2-mod.png) -->
+
+| Method                  | Simplicity ↑     | Fluency ↑        | Adequacy ↑       | Avg. ↑          | Rank ↓         |
+|-------------------------|------------------|------------------|------------------|-----------------|----------------|
+| Direct Back Translation | 3.42 ±0.87       | 4.36 ±0.78       | **4.72** ±0.56   | 4.17            | 2.88           |
+| Cross-Lingual Pseudo Data | 4.11 ±0.81     | 4.46 ±0.65       | 3.88 ±0.96       | 4.15            | 2.86           |
+| gpt-3.5-turbo           | 4.17 ±0.89       | 4.46 ±0.70       | 4.43 ±0.78       | 4.35            | 2.29           |
+| Gold Reference          | **4.20** ±1.08   | **4.68** ±0.55   | 4.31 ±0.93       | **4.40**        | **1.97**       |
+
 
 The human simplified reference (Gold Reference) in the MCTS dataset achieved the best average score and rank in the manual evaluation, significantly outperforming the output of the simplification system.
 
