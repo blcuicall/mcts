@@ -34,6 +34,12 @@ Files with the suffix ``orig`` are unsimplified source sentence files. The five 
 ### Data Example
 
 ![alt DataExample](https://github.com/blcuicall/mcts/blob/main/images/exp.png)
+| Original | Reference |
+|----------|-----------|
+| 为适应大西南进出口物资迅速增长的需要，北部湾沿海四市开始了新一轮建港热潮。 | 大西南进口和出口物资的需要迅速增长，北部湾沿海四座城市兴起了新一轮港口建设。  |
+|---|---|
+| 中国又一条煤炭运输大通道──连接天津蓟县与天津港之间的蓟港铁路日前破土动工。 | 蓟港铁路连接天津蓟县和天津港，用于煤炭运输，前几天开始建造。 | 
+| 按设计，“进步M-24”号载重飞船可同轨道站在无人操纵的情况下进行自动对接。 | 按照设计，无人操控的“进步M-24”号飞船可以自动对接轨道站。 |
 
 ### Evaluation Metrics
 
