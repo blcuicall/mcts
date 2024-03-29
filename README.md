@@ -88,7 +88,7 @@ The SARI, BLEU, and HSK-Level results calculated using the automated evaluating 
 | Direct Back Translation | 40.37     | 48.72    | 39.19      | 45.44     |
 | Translated Wiki-Large   | 28.30     | 82.20    | 40.32      | 44.92     |
 | Cross-Lingual Pseudo Data | 38.49   | 63.06    | 41.57      | 44.24     |
-|gpt-3.5-turbo-few-shot   | 43.95     | 56.46    | 44.44      | 40.67     |
+|gpt-3.5-turbo-few-shot   | <b>43.95</b>     | 56.46    | 44.44      | 40.67     |
 | gpt-3.5-turbo           | 42.39     | 49.22    | 43.68      | 41.29     |
 | text-davinci-003        | 37.97     | 36.18    | 38.80      | 45.32     |
 
