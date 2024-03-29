@@ -28,7 +28,13 @@ MCTS 数据集是中文文本简化任务上规模最大、参考最多的评估
 
 ### 数据示例
 
-![alt 数据示例](https://github.com/blcuicall/mcts/blob/main/images/exp.png)
+<!-- ![alt DataExample](https://github.com/blcuicall/mcts/blob/main/images/exp.png) -->
+| 原句 | 简化句 |
+|----------|-----------|
+| 为适应大西南进出口物资迅速增长的需要，北部湾沿海四市开始了新一轮建港热潮。<br> In order to adapt to the rapid growth of import and export materials in the southwest, four coastal cities in the Beibu Gulf have started a new wave of port construction. | 大西南进口和出口物资的需要迅速增长，北部湾沿海四座城市兴起了新一轮港口建设。<br> The demand for imported and exported materials in the southwest has grown rapidly. Four coastal cities in the Beibu Gulf have begun a new round of port construction.  |
+| 中国又一条煤炭运输大通道──连接天津蓟县与天津港之间的蓟港铁路日前破土动工。<br>Another major coal transportation corridor in China - the Jigang Railway connecting Tianjin Jixian County and Tianjin Port - has recently broken ground. | 蓟港铁路连接天津蓟县和天津港，用于煤炭运输，前几天开始建造。<br>Jigang Railway connects Tianjin Jixian County and Tianjin Port for coal transportation, and construction began a few days ago.  | 
+| 按设计，“进步M-24”号载重飞船可同轨道站在无人操纵的情况下进行自动对接。<br>According to the design, the "Progress M-24" heavy-duty spacecraft can automatically dock with the orbital station under unmanned control. | 按照设计，无人操控的“进步M-24”号飞船可以自动对接轨道站。<br>According to the design, the unmanned "Progress M-24" spacecraft can automatically dock with the orbital station. |
+
 
 ### 评估方式
 
@@ -69,11 +75,30 @@ python scripts/hsk_evaluate.py dataset/mcts.test.orig
 
 使用自动化评估工具计算的 SARI、BLEU、HSK-Level 结果如下表：
 
-![alt 评测结果](https://github.com/blcuicall/mcts/blob/main/images/result1-mod.png)
+<!-- ![alt EvaluateResult](https://github.com/blcuicall/mcts/blob/main/images/result1-mod.png) -->
+
+| Method                  | SARI ↑    | BLEU ↑   | L1-3 (%) ↑ | L7+ (%) ↓ |
+|-------------------------|-----------|----------|------------|-----------|
+| Source                  | 22.37     | 84.75    | 40.24      | 44.90     |
+| Gold Reference          | 48.11     | 61.62    | 46.25      | 39.50     |
+| Direct Back Translation | 40.37     | 48.72    | 39.19      | 45.44     |
+| Translated Wiki-Large   | 28.30     | **82.20**   | 40.32      | 44.92     |
+| Cross-Lingual Pseudo Data | 38.49   | 63.06    | 41.57      | 44.24     |
+|gpt-3.5-turbo-few-shot   | **43.95**   | 56.46    | **44.44**  | **40.67** |
+| gpt-3.5-turbo           | 42.39     | 49.22    | 43.68      | 41.29     |
+| text-davinci-003        | 37.97     | 36.18    | 38.80      | 45.32     |
 
 对其中表现较好的几种代表性方法，我们聘请语言学背景的同学，从流利性、语义完整性和简单性三个方面，进行了人工评估。评估结果如下：
 
-![alt 评测结果](https://github.com/blcuicall/mcts/blob/main/images/result2-mod.png)
+<!-- ![alt EvaluateResult2](https://github.com/blcuicall/mcts/blob/main/images/result2-mod.png) -->
+
+| Method                  | Simplicity ↑     | Fluency ↑        | Adequacy ↑       | Avg. ↑          | Rank ↓         |
+|-------------------------|------------------|------------------|------------------|-----------------|----------------|
+| Direct Back Translation | 3.42 ±0.87       | 4.36 ±0.78       | **4.72** ±0.56   | 4.17            | 2.88           |
+| Cross-Lingual Pseudo Data | 4.11 ±0.81     | 4.46 ±0.65       | 3.88 ±0.96       | 4.15            | 2.86           |
+| gpt-3.5-turbo           | 4.17 ±0.89       | 4.46 ±0.70       | 4.43 ±0.78       | 4.35            | 2.29           |
+| Gold Reference          | **4.20** ±1.08   | **4.68** ±0.55   | 4.31 ±0.93       | **4.40**        | **1.97**       |
+
 
 MCTS数据集中的人工简化参考 (Gold Reference) 在人工评估中获得了最好的平均分数和排名，明显优于简化系统的输出结果。
 
