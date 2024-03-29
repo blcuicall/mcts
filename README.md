@@ -79,7 +79,19 @@ We compared a variety of baseline methods, which included:
 
 The SARI, BLEU, and HSK-Level results calculated using the automated evaluating tool are shown in the table below:
 
-![alt EvaluateResult](https://github.com/blcuicall/mcts/blob/main/images/result1-mod.png)
+<!-- ![alt EvaluateResult](https://github.com/blcuicall/mcts/blob/main/images/result1-mod.png) -->
+
+| Method                  | SARI ↑    | BLEU ↑   | L1-3 (%) ↑ | L7+ (%) ↓ |
+|-------------------------|-----------|----------|------------|-----------|
+| Source                  | 22.37     | 84.75    | 40.24      | 44.90     |
+| Gold Reference          | 48.11     | 61.62    | 46.25      | 39.50     |
+| Direct Back Translation | 40.37     | 48.72    | 39.19      | 45.44     |
+| Translated Wiki-Large   | 28.30     | 82.20    | 40.32      | 44.92     |
+| Cross-Lingual Pseudo Data | 38.49   | 63.06    | 41.57      | 44.24     |
+| gpt-3.5-turbo           | 42.39     | 49.22    | 43.68      | 41.29     |
+| text-davinci-003        | 37.97     | 36.18    | 38.80      | 45.32     |
+
+
 
 For several of these representative methods that performed well, we hired students with linguistic backgrounds to manually evaluate them in terms of fluency, semantic integrity and simplicity. The evaluation results are as follows:
 
