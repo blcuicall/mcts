@@ -36,7 +36,7 @@ Files with the suffix ``orig`` are unsimplified source sentence files. The five 
 ![alt DataExample](https://github.com/blcuicall/mcts/blob/main/images/exp.png)
 | Original | Reference |
 |----------|-----------|
-| 为适应大西南进出口物资迅速增长的需要，北部湾沿海四市开始了新一轮建港热潮。( In order to adapt to the rapid growth of import and export materials in the southwest, four coastal cities in the Beibu Gulf have started a new wave of port construction.) | 大西南进口和出口物资的需要迅速增长，北部湾沿海四座城市兴起了新一轮港口建设。( The demand for imported and exported materials in the southwest has grown rapidly. Four coastal cities in the Beibu Gulf have begun a new round of port construction.)  |
+| 为适应大西南进出口物资迅速增长的需要，北部湾沿海四市开始了新一轮建港热潮。<br> In order to adapt to the rapid growth of import and export materials in the southwest, four coastal cities in the Beibu Gulf have started a new wave of port construction. | 大西南进口和出口物资的需要迅速增长，北部湾沿海四座城市兴起了新一轮港口建设。( The demand for imported and exported materials in the southwest has grown rapidly. Four coastal cities in the Beibu Gulf have begun a new round of port construction.)  |
 | 中国又一条煤炭运输大通道──连接天津蓟县与天津港之间的蓟港铁路日前破土动工。(Another major coal transportation corridor in China - the Jigang Railway connecting Tianjin Jixian County and Tianjin Port - has recently broken ground.) | 蓟港铁路连接天津蓟县和天津港，用于煤炭运输，前几天开始建造。(Jigang Railway connects Tianjin Jixian County and Tianjin Port for coal transportation, and construction began a few days ago. ) | 
 | 按设计，“进步M-24”号载重飞船可同轨道站在无人操纵的情况下进行自动对接。(According to the design, the "Progress M-24" heavy-duty spacecraft can automatically dock with the orbital station under unmanned control.) | 按照设计，无人操控的“进步M-24”号飞船可以自动对接轨道站。(According to the design, the unmanned "Progress M-24" spacecraft can automatically dock with the orbital station.) |
 
