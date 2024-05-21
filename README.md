@@ -11,7 +11,7 @@ This repository contains the official dataset and scripts of our LREC-COLING 202
 
 The task of text simplification is one of the fundamental tasks in the field of natural language processing, aiming to make the text easier to understand by performing multiple rewriting transformations. Text Simplification can help research on graded reading, machine translation, and help language learners understand complex texts.  Currently, there are fewer studies on Chinese text simplification, and the lack of generalized evaluation data is one of the important reasons. For this reason, we constructed the **MCTS (Multi-Reference Chinese Text Simplification Dataset)**, the first published dataset on the Chinese Text Simplification Task. It is the largest evaluation dataset on the Chinese text simplification task so far and has the most number of references. This is a foundational piece of work in our exploration of Chinese text simplification, and we expect it to inform future research.
 
-Paper address: [https://arxiv.org/abs/2306.02796](< https://arxiv.org/abs/2306.02796 >)
+Paper address: [https://aclanthology.org/2024.lrec-main.969](< https://aclanthology.org/2024.lrec-main.969 >)
 
 ### Data Scale
 
