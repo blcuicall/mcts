@@ -123,13 +123,16 @@ Welcome to the homepage of our group [**BLCU-ICALL**](< https://blcuicall.org >)
 If you use our MCTS dataset, please cite:
 
 ```
-@misc{chong-2023-mcts,
-      title={MCTS: A Multi-Reference Chinese Text Simplification Dataset}, 
-      author={Ruining Chong and Luming Lu and Liner Yang and Jinran Nie and Shuhan Zhou and Yaoxin Li and Erhong Yang},
-      year={2023},
-      eprint={2306.02796},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{chong-etal-2024-mcts-multi,
+    title = "{MCTS}: A Multi-Reference {C}hinese Text Simplification Dataset",
+    author = "Chong Ruining and Lu Luming and Yang Liner and Nie Jinran and Liu Zhenghao and Wang Shuo and Zhou Shuhan and Li Yaoxin and Yang Erhong",
+    booktitle = "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",
+    month = may,
+    year = "2024",
+    address = "Torino, Italy",
+    publisher = "ELRA and ICCL",
+    url = "https://aclanthology.org/2024.lrec-main.969",
+    pages = "11111--11122",
 }
 
 @misc{kong-acl-2022-simpdefiner,
