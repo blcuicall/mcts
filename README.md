@@ -126,13 +126,9 @@ If you use our MCTS dataset, please cite:
 @inproceedings{chong-etal-2024-mcts-multi,
     title = "{MCTS}: A Multi-Reference {C}hinese Text Simplification Dataset",
     author = "Chong Ruining and Lu Luming and Yang Liner and Nie Jinran and Liu Zhenghao and Wang Shuo and Zhou Shuhan and Li Yaoxin and Yang Erhong",
-    booktitle = "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",
-    month = may,
-    year = "2024",
-    address = "Torino, Italy",
-    publisher = "ELRA and ICCL",
-    url = "https://aclanthology.org/2024.lrec-main.969",
-    pages = "11111--11122",
+    booktitle = {LREC-COLING},
+    month = {May},
+    year = {2024},
 }
 
 @misc{kong-acl-2022-simpdefiner,
